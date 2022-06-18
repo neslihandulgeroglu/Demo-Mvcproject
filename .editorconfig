@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CS8618: Null atanamaz alan, oluşturucudan çıkış yaparken null olmayan bir değer içermelidir. Alanı null atanabilir olarak bildirmeyi düşünün.
+dotnet_diagnostic.CS8618.severity = silent
+
+# IDE0055: Biçimlendirme Düzeltme
+dotnet_diagnostic.IDE0055.severity = none
+
+# IDE0044: Salt okunur değiştirici ekle
+dotnet_diagnostic.IDE0044.severity = silent
