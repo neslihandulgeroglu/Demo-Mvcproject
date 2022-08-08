@@ -2,16 +2,17 @@
 using BusinessLayer.FluentValidation;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
-using Microsoft.AspNetCore.Mvc;
-using FluentValidation.Results;
-using System.ComponentModel.DataAnnotations;
+using System.Collections;
 using ValidationResult = FluentValidation.Results.ValidationResult;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Controllers
 {
     public class ProductController : Controller
     {
+#pragma warning disable IDE0090 // 'new(...)' kullanın
         ProductManager productManager = new ProductManager(new EfProductDal());
+#pragma warning restore IDE0090 // 'new(...)' kullanın
         public IActionResult Index()
         {
             var values = productManager.TGetList();
